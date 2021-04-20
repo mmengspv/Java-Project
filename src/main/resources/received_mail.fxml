@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.java_63.controllers.ReceivedMailController">
+   <children>
+      <Pane layoutX="10.0" prefHeight="610.0" prefWidth="810.0" style="-fx-background-color: #f2d1c2;">
+         <children>
+            <ComboBox fx:id="sortComboBox" layoutX="291.0" layoutY="517.0" onAction="#handleSortComboBoxOnAction" prefWidth="150.0" promptText="Sort table by" style="-fx-background-color: #f7bc52;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ComboBox>
+            <Label layoutX="472.0" layoutY="560.0" prefHeight="21.0" prefWidth="91.0" text="Staff sender">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="staffOutLabel" layoutX="580.0" layoutY="560.0" prefHeight="21.0" prefWidth="154.0" text="-" />
+         </children></Pane>
+      <Pane layoutX="-146.0" layoutY="-408.0" prefHeight="990.0" prefWidth="620.0" rotate="45.0" style="-fx-background-color: #a7421e;" />
+      <Button fx:id="backButton" layoutX="15.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleBackButtonOnAction" prefHeight="31.0" prefWidth="79.0" text="Back">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <TableView fx:id="receivedMailTableView" layoutX="14.0" layoutY="17.0" prefHeight="492.0" prefWidth="449.0">
+         <columns>
+            <TableColumn fx:id="dateTableColumn" prefWidth="149.0" text="date" />
+            <TableColumn fx:id="roomTableColumn" prefWidth="58.0" text="room" />
+            <TableColumn fx:id="receiverTableColumn" prefWidth="92.0" text="receiver" />
+            <TableColumn fx:id="typeTableColumn" prefWidth="64.0" text="type" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="85.0" text="Status" />
+         </columns>
+      </TableView>
+      <Separator layoutX="468.0" layoutY="17.0" orientation="VERTICAL" prefHeight="550.0" prefWidth="3.0" style="-fx-background-color: #f7bc52;" />
+      <Label layoutX="482.0" layoutY="213.0" prefHeight="21.0" prefWidth="67.0" text="Room">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="243.0" prefHeight="21.0" prefWidth="79.0" text="Receiver">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="272.0" prefHeight="21.0" prefWidth="79.0" text="Sender">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="300.0" prefHeight="21.0" prefWidth="79.0" text="Type">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="332.0" prefHeight="21.0" prefWidth="79.0" text="Width">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="609.0" layoutY="332.0" prefHeight="21.0" prefWidth="61.0" text="Height">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="363.0" prefHeight="21.0" prefWidth="90.0" text="Importance">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="392.0" prefHeight="21.0" prefWidth="90.0" text="Shipping by">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="481.0" layoutY="422.0" prefHeight="21.0" prefWidth="129.0" text="Tracking number">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="451.0" prefHeight="21.0" prefWidth="101.0" text="Staff receiver">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="481.0" layoutY="480.0" prefHeight="21.0" prefWidth="147.0" text="Staff Received time">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="481.0" layoutY="508.0" prefHeight="21.0" prefWidth="101.0" text="Received by">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="481.0" layoutY="534.0" prefHeight="21.0" prefWidth="169.0" text="Resident received time">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="roomLabel" layoutX="541.0" layoutY="211.0" prefHeight="21.0" prefWidth="63.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="receiverLabel" layoutX="555.0" layoutY="241.0" prefHeight="21.0" prefWidth="201.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="senderLabel" layoutX="543.0" layoutY="270.0" prefHeight="21.0" prefWidth="194.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="receiveByLabel" layoutX="586.0" layoutY="506.0" prefHeight="21.0" prefWidth="183.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="typeLabel" layoutX="537.0" layoutY="298.0" prefHeight="21.0" prefWidth="91.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="widthLabel" layoutX="535.0" layoutY="330.0" prefHeight="21.0" prefWidth="61.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="heightLabel" layoutX="668.0" layoutY="330.0" prefHeight="21.0" prefWidth="63.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="importanceLabel" layoutX="584.0" layoutY="361.0" prefHeight="21.0" prefWidth="167.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="shippingByLabel" layoutX="579.0" layoutY="390.0" prefHeight="21.0" prefWidth="183.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="trackingNumberLabel" layoutX="622.0" layoutY="420.0" prefHeight="25.0" prefWidth="169.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="staffLabel" layoutX="591.0" layoutY="449.0" prefHeight="21.0" prefWidth="217.0" text="-">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="staffReceivedTimeLabel" layoutX="628.0" layoutY="480.0" prefHeight="21.0" prefWidth="167.0" text="-" />
+      <Label fx:id="residentReceivedTimeLabel" layoutX="646.0" layoutY="534.0" prefHeight="21.0" prefWidth="154.0" text="-" />
+      <Label layoutX="17.0" layoutY="517.0" prefHeight="31.0" prefWidth="113.0" text="Search room" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="roomNumberSearchTextField" layoutX="148.0" layoutY="517.0" prefHeight="13.0" prefWidth="140.0" promptText="room number" />
+      <ImageView fx:id="image" fitHeight="191.0" fitWidth="231.0" layoutX="520.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

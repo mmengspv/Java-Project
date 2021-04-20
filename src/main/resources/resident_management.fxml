@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="" prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.java_63.controllers.ResidentManagementController">
+   <children>
+      <Pane layoutX="-10.0" prefHeight="600.0" prefWidth="810.0" style="-fx-background-color: #f2d1c2;">
+         <children>
+            <Label layoutX="541.0" layoutY="160.0" prefHeight="29.0" prefWidth="140.0" text="Building Name :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="541.0" layoutY="189.0" prefHeight="29.0" prefWidth="61.0" text="Floor :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="541.0" layoutY="218.0" prefHeight="29.0" prefWidth="140.0" text="Room Number :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="541.0" layoutY="247.0" prefHeight="29.0" prefWidth="61.0" text="Type :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="541.0" layoutY="276.0" prefHeight="29.0" prefWidth="92.0" text="Resident :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="buildingNameLabel" layoutX="689.0" layoutY="160.0" prefHeight="29.0" prefWidth="110.0" text="...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="floorLabel" layoutX="612.0" layoutY="189.0" prefHeight="29.0" prefWidth="117.0" text="...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="roomNumberLabel" layoutX="689.0" layoutY="218.0" prefHeight="29.0" prefWidth="110.0" text="...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="typeLabel" layoutX="607.0" layoutY="247.0" prefHeight="29.0" prefWidth="149.0" text="...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="residentLabel" alignment="TOP_LEFT" layoutX="543.0" layoutY="307.0" prefHeight="226.0" prefWidth="261.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="-180.0" layoutY="-403.0" prefHeight="990.0" prefWidth="620.0" rotate="45.0" style="-fx-background-color: #a7421e;" />
+      <TableView fx:id="roomTableView" layoutX="14.0" layoutY="14.0" prefHeight="483.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="buildingNameTableColumn" prefWidth="66.0" text="Building" />
+          <TableColumn fx:id="floorTableColumn" prefWidth="44.0" text="Floor" />
+            <TableColumn fx:id="roomNumberTableColumn" prefWidth="50.0" text="Room" />
+            <TableColumn fx:id="typeTableColumn" prefWidth="110.0" text="Type" />
+            <TableColumn fx:id="hostTableColumn" prefWidth="161.0" text="Host" />
+            <TableColumn fx:id="totalResidentTableColumn" prefWidth="68.0" text="Resident" />
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleBackButtonOnAction" prefHeight="31.0" prefWidth="61.0" text="Back">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Separator layoutX="517.0" layoutY="14.0" orientation="VERTICAL" prefHeight="493.0" prefWidth="6.0" style="-fx-background-color: #f7bc52;" />
+      <Button fx:id="addRoomResidentButton" layoutX="147.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleAddRoomResidentButtonOnAction" prefHeight="31.0" prefWidth="167.0" text="Add Room Resident">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="addResidentButton" layoutX="340.0" layoutY="555.0" mnemonicParsing="false" onAction="#handleAddResidentButtonOnAction" prefHeight="31.0" prefWidth="149.0" text="Add Resident">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TextField fx:id="nameSearchTextField" layoutX="136.0" layoutY="507.0" prefHeight="31.0" prefWidth="131.0" promptText="name" />
+      <Button fx:id="residentInformationButton" layoutX="313.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleResidentInformationButtonOnAction" prefHeight="31.0" prefWidth="195.0" text="Resident Information">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="17.0" layoutY="507.0" prefHeight="31.0" prefWidth="110.0" text="search name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.java_63.controllers.AdminManageStaffController">
+   <children>
+      <Pane layoutX="-10.0" layoutY="-10.0" prefHeight="610.0" prefWidth="810.0" style="-fx-background-color: #f2d1c2;" />
+      <Pane layoutX="-120.0" layoutY="-403.0" prefHeight="990.0" prefWidth="620.0" rotate="45.0" style="-fx-background-color: #a7421e;" />
+      <TableView fx:id="staffTableView" layoutX="12.0" layoutY="14.0" prefHeight="508.0" prefWidth="494.0">
+         <columns>
+            <TableColumn fx:id="lastLoggedInTableColumn" prefWidth="147.0" text="Last Loggedin" />
+            <TableColumn fx:id="usernameTableColumn" prefWidth="76.0" text="username" />
+            <TableColumn fx:id="nameTableColumn" prefWidth="77.0" text="name" />
+            <TableColumn fx:id="roleTableColumn" prefWidth="40.0" text="role" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="79.0" text="status" />
+            <TableColumn fx:id="tryAccessTableColumn" prefWidth="74.0" text="try access" />
+         </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="547.0" mnemonicParsing="false" onAction="#handleBackButtonOnAction" prefHeight="31.0" prefWidth="74.0" text="Back">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Label layoutX="519.0" layoutY="242.0" prefHeight="39.0" prefWidth="85.0" text="Name :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="519.0" layoutY="279.0" prefHeight="22.0" prefWidth="85.0" text="Surname :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="519.0" layoutY="352.0" prefHeight="22.0" prefWidth="85.0" text="Role :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="519.0" layoutY="391.0" prefHeight="22.0" prefWidth="85.0" text="Status :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="519.0" layoutY="319.0" prefHeight="27.0" prefWidth="144.0" text="Phone number :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="deactivate" layoutX="663.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleDeactivateButtonOnAction" text="Deactivate">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="activate" layoutX="542.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleActivateButtonOnAction" text="Activate">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="nameLabel" layoutX="591.0" layoutY="242.0" prefHeight="39.0" prefWidth="197.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="surnameLabel" layoutX="621.0" layoutY="273.0" prefHeight="39.0" prefWidth="175.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="phoneNumberLabel" layoutX="659.0" layoutY="313.0" prefHeight="39.0" prefWidth="140.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="roleLabel" layoutX="576.0" layoutY="346.0" prefHeight="39.0" prefWidth="175.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusLabel" layoutX="591.0" layoutY="385.0" prefHeight="39.0" prefWidth="175.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="523.0" layoutY="432.0" prefHeight="27.0" prefWidth="131.0" text="Try to access :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tryToAccessLabel" layoutX="647.0" layoutY="426.0" prefHeight="39.0" prefWidth="122.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="519.0" layoutY="207.0" prefHeight="39.0" prefWidth="108.0" text="Username :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="623.0" layoutY="207.0" prefHeight="39.0" prefWidth="164.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="509.0" orientation="VERTICAL" prefHeight="552.0" prefWidth="6.0" style="-fx-background-color: #f7bc52;" />
+      <ImageView fx:id="image" fitHeight="182.0" fitWidth="197.0" layoutX="560.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

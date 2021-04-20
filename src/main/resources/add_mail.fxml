@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.java_63.controllers.AddMailController">
+   <children>
+      <Pane layoutX="-10.0" prefHeight="600.0" prefWidth="810.0" style="-fx-background-color: #f2d1c2;" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="554.0" mnemonicParsing="false" onAction="#handleBackButtonOnAction" prefHeight="31.0" prefWidth="60.0" text="Back">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="208.0" layoutY="32.0" prefHeight="80.0" prefWidth="399.0" style="-fx-background-color: #a7421e;" text="Add Mail" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="addMailButton" layoutX="698.0" layoutY="554.0" mnemonicParsing="false" onAction="#handleAddMailButtonOnAction" prefHeight="31.0" prefWidth="88.0" text="Add mail">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <ComboBox fx:id="typeComboBox" layoutX="62.0" layoutY="174.0" onAction="#handleTypeComboBoxOnAction" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: white;">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect>
+      </ComboBox>
+      <Label layoutX="60.0" layoutY="140.0" prefHeight="31.0" prefWidth="138.0" text="Type">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="237.0" layoutY="140.0" prefHeight="31.0" prefWidth="98.0" text="Importance">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="importanceComboBox" layoutX="237.0" layoutY="174.0" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: white;">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" />
+         </effect></ComboBox>
+      <Label layoutX="41.0" layoutY="228.0" prefHeight="38.0" prefWidth="138.0" text="Name receiver">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="365.0" layoutY="229.0" prefHeight="38.0" prefWidth="151.0" text="Surname receiver">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="roomNumberTextField" layoutX="523.0" layoutY="174.0" prefHeight="31.0" prefWidth="128.0" />
+      <TextField fx:id="nameReceiverTextField" layoutX="184.0" layoutY="232.0" prefHeight="31.0" prefWidth="165.0" />
+      <TextField fx:id="surnameReceiverTextField" layoutX="521.0" layoutY="233.0" prefHeight="31.0" prefWidth="242.0" />
+      <TextField fx:id="nameSenderTextField" layoutX="184.0" layoutY="292.0" prefHeight="31.0" prefWidth="165.0" />
+      <TextField fx:id="surnameSenderTextField" layoutX="517.0" layoutY="292.0" prefHeight="31.0" prefWidth="242.0" />
+      <TextField fx:id="widthTextField" layoutX="86.0" layoutY="393.0" prefHeight="31.0" prefWidth="80.0" />
+      <TextField fx:id="heightTextField" layoutX="204.0" layoutY="393.0" prefHeight="31.0" prefWidth="80.0" />
+      <Label alignment="CENTER" layoutX="99.0" layoutY="352.0" prefHeight="31.0" prefWidth="60.0" text="Width">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="214.0" layoutY="351.0" prefHeight="31.0" prefWidth="60.0" text="Height">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="387.0" layoutY="172.0" prefHeight="31.0" prefWidth="128.0" text="Room number">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="shippingCompanyTextField" layoutX="517.0" layoutY="351.0" prefHeight="31.0" prefWidth="242.0" />
+      <Label layoutX="51.0" layoutY="289.0" prefHeight="38.0" prefWidth="128.0" text="Name sender">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="289.0" prefHeight="38.0" prefWidth="138.0" text="Surname sender">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="348.0" prefHeight="38.0" prefWidth="165.0" text="Shipping company">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="trackingNumberTextField" layoutX="516.0" layoutY="409.0" prefHeight="31.0" prefWidth="242.0" />
+      <Label layoutX="354.0" layoutY="409.0" prefHeight="38.0" prefWidth="151.0" text="Tracking number">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="uploadButton" layoutX="603.0" layoutY="496.0" mnemonicParsing="false" text="Upload">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TextField fx:id="uploadTextField" layoutX="281.0" layoutY="496.0" prefHeight="31.0" prefWidth="306.0" />
+      <Label layoutX="286.0" layoutY="465.0" prefHeight="31.0" prefWidth="114.0" text="Upload image">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <ImageView fx:id="image" fitHeight="117.0" fitWidth="178.0" layoutX="95.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

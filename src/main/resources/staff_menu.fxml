@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.java_63.controllers.StaffMenuController">
+   <children>
+      <Pane layoutX="-10.0" prefHeight="600.0" prefWidth="810.0" style="-fx-background-color: #f2d1c2;" />
+      <Pane layoutX="-148.0" layoutY="-395.0" prefHeight="990.0" prefWidth="620.0" rotate="45.0" style="-fx-background-color: #a7421e;" />
+      <Button fx:id="residentManagementButton" layoutX="87.0" layoutY="397.0" mnemonicParsing="false" onAction="#handleResidentManagementButtonOnAction" prefHeight="56.0" prefWidth="287.0" text="Resident Management">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="mailboxManagementButton" layoutX="449.0" layoutY="397.0" mnemonicParsing="false" onAction="#handleMailboxManagementButtonOnAction" prefHeight="56.0" prefWidth="287.0" text="Mailbox Management">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Label alignment="CENTER" layoutX="231.0" layoutY="54.0" prefHeight="93.0" prefWidth="346.0" text="Staff Menu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="64.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutButton" layoutX="19.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleLogoutButtonOnAction" prefHeight="38.0" prefWidth="76.0" text="Logout">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="changePasswordButton" layoutX="634.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleChangePasswordButtonOnAction" prefHeight="38.0" prefWidth="152.0" text="Change password">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

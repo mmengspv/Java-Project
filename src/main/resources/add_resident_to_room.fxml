@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.java_63.controllers.AddResidentToRoomController">
+   <children>
+      <Pane layoutX="-10.0" prefHeight="600.0" prefWidth="810.0" style="-fx-background-color: #f2d1c2;" />
+      <Pane layoutX="-149.0" layoutY="-418.0" prefHeight="990.0" prefWidth="620.0" rotate="45.0" style="-fx-background-color: #a7421e;" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="553.0" mnemonicParsing="false" onAction="#handleBackButtonOnAction" prefHeight="31.0" prefWidth="69.0" text="Back">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Label alignment="CENTER" layoutX="250.0" layoutY="45.0" prefHeight="85.0" prefWidth="318.0" text="Add Resident" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="193.0" prefHeight="37.0" prefWidth="89.0" text="Building" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="206.0" layoutY="193.0" prefHeight="37.0" prefWidth="89.0" text="Floor" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="193.0" prefHeight="37.0" prefWidth="130.0" text="Room number" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="buildingComboBox" layoutX="57.0" layoutY="236.0" onAction="#handleBuildingNameComboBoxOnAction" prefHeight="31.0" prefWidth="89.0" />
+      <ComboBox fx:id="floorComboBox" layoutX="206.0" layoutY="236.0" onAction="#handleFloorComboBoxOnAction" prefHeight="31.0" prefWidth="89.0" />
+      <ComboBox fx:id="roomNumberComboBox" layoutX="341.0" layoutY="236.0" prefHeight="31.0" prefWidth="112.0" />
+      <Label layoutX="65.0" layoutY="322.0" prefHeight="37.0" prefWidth="89.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="373.0" layoutY="322.0" prefHeight="37.0" prefWidth="89.0" text="Surname">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="407.0" prefHeight="37.0" prefWidth="130.0" text="Phone number" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="addButton" layoutX="682.0" layoutY="547.0" mnemonicParsing="false" onAction="#handleAddButtonOnAction" prefHeight="31.0" prefWidth="97.0" text="Add">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="nameTextField" layoutX="130.0" layoutY="325.0" />
+      <TextField fx:id="surnameTextField" layoutX="480.0" layoutY="325.0" />
+      <TextField fx:id="phoneNumberTextField" layoutX="202.0" layoutY="410.0" prefHeight="31.0" prefWidth="228.0" />
+   </children>
+</AnchorPane>
